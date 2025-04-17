@@ -1,0 +1,45 @@
+#!/usr/local/bin/node /Volumes/Unicorn/wing/index.js
+-- This is a test program
+$test = 1
+
+function hello
+    print hi
+end
+
+function goodbye $thing
+    if defined $thing do
+        print thing is defined: $thing
+    else do
+        print thing is not defined
+    end
+end
+
+hello
+goodbye hello world
+
+print hello $test, this one is also escaped: \$test
+
+#include ./demo.wing
+#include ./test.wjs
+
+#include ./nonexistant.wing
+
+$dontChangeMe = hello
+$dontChangeMe! = $dontChangeMe
+print $dontChangeMe
+--$dontChangeMe = world
+
+function stuff
+    #include /some/path/to/a/file.wing
+end
+
+?!This feature is deprecated and will be removed in Wing 3
+
+$val1 = 2
+$val2 = 3
+$val2a = 2
+$val3 < sum $val1 $val2 $val2a
+print $val3
+
+#include <filesystem>
+#include wing:filesystem

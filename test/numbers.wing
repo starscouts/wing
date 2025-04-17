@@ -1,0 +1,5 @@
+#!/usr/local/bin/node /Volumes/Unicorn/wing/index.js
+$1 = 1
+$2 = 1
+$3 < sum $1 $2
+print $3
